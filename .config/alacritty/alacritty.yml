@@ -1,0 +1,47 @@
+shell:
+  program: /usr/bin/tmux
+  args:
+    - -u
+    - new-session
+    - -A
+    - -s
+    - main
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste }
+
+selection:
+  save_to_clipboard: true
+
+colors:
+  cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: '#000000'
+      background: '#ffffff'
+    focused_match:
+      foreground: '#000000'
+      background: '#ffff66'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
+
+font:
+  size: 11
+  normal:
+    family: MesloLGS NF
+    style: Regular
+  bold:
+    family: MesloLGS NF
+    style: Bold
+  italic:
+    family: MesloLGS NF
+    style: Italic
+  bold_italic:
+    family: MesloLGS NF
+    style: Bold Italic
