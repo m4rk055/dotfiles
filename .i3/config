@@ -424,4 +424,4 @@ exec --no-startup-id slack
 
 assign [class="Slack"] $ws1
 assign [class="Firefox"] $ws2
-assign [class="code-oss"] $ws3
+# assign [class="code-oss"] $ws3
