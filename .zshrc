@@ -26,12 +26,13 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-export JAVA_HOME=/usr/bin/java
+#export JAVA_HOME=/usr/bin/java
 export PYTHON=/usr/bin/python
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/marko/secrets/gcloud-storage-blindsend.json"
 
 alias config='/usr/bin/git --git-dir=/home/marko/.cfg/ --work-tree=/home/marko'
+alias v='nvim'
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
