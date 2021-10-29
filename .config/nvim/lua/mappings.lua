@@ -45,3 +45,8 @@ map('n', '<leader>dl', '<cmd>lua require("dap").run_last()<CR>')
 -- nvim-tree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
 map('n', '<leader>r', ':NvimTreeRefresh<CR>')
+
+-- barbar
+map('n', '<C-l>', ':BufferNext<CR>')
+map('n', '<C-h>', ':BufferPrevious<CR>')
+map('n', '<C-p>', ':BufferPick<CR>', {silent = true})
