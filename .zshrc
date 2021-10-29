@@ -33,6 +33,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/marko/secrets/gcloud-storage-blinds
 
 alias config='/usr/bin/git --git-dir=/home/marko/.cfg/ --work-tree=/home/marko'
 alias v='nvim'
+alias grep='rg'
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
