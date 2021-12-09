@@ -20,3 +20,11 @@ vim.g.indentLine_char = '⎸'
 -- vim.g.indentLine_leadingSpaceChar = '⋅'
 
 cmd('set number')
+cmd('set scrolloff=5')
+cmd('set smarttab')
+cmd('set autoindent')
+cmd('set backspace=indent,eol,nostop')
+cmd('set complete-=i')
+cmd('set wildmenu')
+
+cmd('set shiftwidth=2')
