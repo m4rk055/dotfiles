@@ -420,8 +420,8 @@ mode "$mode_gaps_outer" {
 
 # custom
 bindsym $mod+Shift+x exec i3lock -c 000000
-bindsym Print exec maim -s | xclip -selection clipboard -t image/png
-
+#bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym Print exec flameshot gui
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
