@@ -422,6 +422,10 @@ mode "$mode_gaps_outer" {
 bindsym $mod+Shift+x exec i3lock -c 000000
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 
+
+bindsym $mod+Shift+comma move workspace to output left
+bindsym $mod+Shift+period move workspace to output right
+
 exec --no-startup-id copyq
 exec --no-startup-id slack
 
