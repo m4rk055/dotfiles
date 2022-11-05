@@ -2,8 +2,7 @@
   "layer": "top",
   "position": "bottom",
   "modules-left": [
-    "sway/workspaces",
-    "custom/right-arrow-dark"
+    "sway/workspaces"
   ],
   "modules-center": [
     "sway/mode"

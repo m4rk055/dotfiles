@@ -10,13 +10,13 @@ window#waybar {
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
-  margin-left: -1px;
   color: #1a1a1a;
 }
 
 #custom-left-arrow-dark,
 #custom-left-arrow-light {
   margin-right: -1px;
+  margin-top: 1px;
 }
 
 #custom-right-arrow-light,
@@ -77,11 +77,13 @@ window#waybar {
 button {
   color: #fdf6e3;
   padding: 0px;
+  border-radius: 0px;
 }
 
 button:hover {
   text-shadow: none;
   box-shadow: inherit;
+  border-color: #1a1a1a;
 }
 
 #pulseaudio {
