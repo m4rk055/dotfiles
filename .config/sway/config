@@ -439,7 +439,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "$gtk-theme"
   gsettings set org.gnome.desktop.interface icon-theme "$icon-theme"
-  gsettings set org.gnome.desktop.interface cursor-theme "$cursor-theme"
+  # gsettings set org.gnome.desktop.interface cursor-theme "$cursor-theme"
+  gsettings set org.gnome.desktop.interface cursor-theme xcursor-breeze
   gsettings set org.gnome.desktop.interface font-name "$gui-font"
 }
 
