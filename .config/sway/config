@@ -68,7 +68,7 @@ set $mod Mod4
 #####################################
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob --anchor top --height 35 --timeout 500"
+exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 #####################################
 ## sound
