@@ -13,16 +13,18 @@ window#waybar {
   color: #1a1a1a;
 }
 
-#custom-left-arrow-dark,
-#custom-left-arrow-light {
-  margin-right: -1px;
-  margin-top: 1px;
-}
-
 #custom-right-arrow-light,
 #custom-left-arrow-light {
   color: #292b2e;
   background: #1a1a1a;
+}
+
+#custom-left-arrow-dark {
+  margin-top: 1px;
+}
+
+#custom-left-arrow-light {
+  margin-right: 1px;
 }
 
 #workspaces,
