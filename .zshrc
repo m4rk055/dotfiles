@@ -28,8 +28,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 #export JAVA_HOME=/usr/bin/java
 export PYTHON=/usr/bin/python
+export DOTNET_ROOT=/snap/dotnet-sdk/current
 
-export GOOGLE_APPLICATION_CREDENTIALS="/home/marko/secrets/gcloud-storage-blindsend.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/home/marko/secrets/gcloud-storage-blindsend.json"
 
 alias config='/usr/bin/git --git-dir=/home/marko/.cfg/ --work-tree=/home/marko'
 alias v='nvim'
@@ -42,3 +43,5 @@ source /usr/share/nvm/init-nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

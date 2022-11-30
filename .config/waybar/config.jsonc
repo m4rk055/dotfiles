@@ -1,0 +1,154 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "sway/mode"
+  ],
+  "modules-right": [
+    "custom/left-arrow-dark",
+    "temperature",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "memory",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "battery",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "pulseaudio",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "custom/clipboard",
+    "tray",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "sway/language",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "custom/suspend",
+    "custom/left-arrow-light",
+    "custom/left-arrow-dark",
+    "clock"
+  ],
+  "custom/left-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-dark": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right-arrow-light": {
+    "format": "",
+    "tooltip": false
+  },
+  "sway/mode": {
+    "format": "舘 <span style=\"italic\">{}</span>",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "format": "{index}"
+  },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 150
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "interval": 30,
+    "tooltip": false,
+    "on-click": "swaymsg exec 'alacritty --command watch sensors'"
+  },
+  "memory": {
+    "interval": 5,
+    "format": " {}%",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "on-click": "alacritty --command htop"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume:2}",
+    "format-bluetooth": "{icon} {volume}",
+    "format-muted": "婢",
+    "format-icons": {
+      "headphones": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      "full": 99,
+      "good": 98,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}",
+    "format-charging": " {capacity}",
+    "format-full": " {capacity}",
+    "format-good": "{icon} {capacity}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "interval": 30
+  },
+  "sway/language": {
+    "format": "{short} {variant}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5,
+    "show-passive-items": true
+  },
+  "clock": {
+    "format-alt": "{:%a %d %b  %H:%M}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+    "today-format": "<span color='#ff6699'><b><u>{}</u></b></span>",
+    "calendar-weeks-pos": "right",
+    "format-calendar": "<span color='#ecc6d9'><b>{}</b></span>",
+    "format-calendar-weeks": "<span color='#99ffdd'>W{:%V}</span>",
+    "format-calendar-weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+    "interval": 60
+  },
+  "custom/clipboard": {
+    "format": "",
+    "interval": "once",
+    "return-type": "json",
+    "on-click": "cliphist list | rofi -dmenu -p 'Select item to copy' -lines 10 -width 35 -theme solarized -font 'hack 10' | cliphist decode | wl-copy; pkill -RTMIN+9 waybar",
+    "on-click-right": "cliphist list | rofi -dmenu -p 'Select item to delete' -lines 10 -width 35 -theme solarized -font 'hack 10' | cliphist delete; pkill -RTMIN+9 waybar",
+    "on-click-middle": "rm -f ~/.cache/cliphist/db; pkill -RTMIN+9 waybar",
+    "exec": "printf '{\"tooltip\":\"%s\"}' $(cliphist list | wc -l)' item(s) in the clipboard\r(Mid click to clear)'",
+    "exec-if": "[ $(cliphist list | wc -l) -gt 0 ]",
+    "signal": 9
+  },
+  "custom/suspend": {
+    "format": "⏼",
+    "on-click": "swaylock -c 000000 --fade-in 0.2 --grace 2 --ignore-empty-password --clock & systemctl suspend"
+  }
+}
