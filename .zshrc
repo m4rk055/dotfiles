@@ -10,7 +10,7 @@ export COURSIER=$HOME/.local/share/coursier/bin
 
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$COURSIER:$PATH
 
-export ZSH="/home/marko/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -30,9 +30,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 export PYTHON=/usr/bin/python
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 
-# export GOOGLE_APPLICATION_CREDENTIALS="/home/marko/secrets/gcloud-storage-blindsend.json"
-
-alias config='/usr/bin/git --git-dir=/home/marko/.cfg/ --work-tree=/home/marko'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias v='nvim'
 alias grep='rg'
 
