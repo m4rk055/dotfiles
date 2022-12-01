@@ -426,6 +426,9 @@ bindsym $mod+F1 exec pcmanfm
 #     bindsym Escape mode "default"
 # }
 
+# notifications
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # sway does not set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
 # See FS#63021

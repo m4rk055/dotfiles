@@ -21,14 +21,17 @@
     "pulseaudio",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
-    "custom/clipboard",
     "tray",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "sway/language",
+    // "custom/left-arrow-light",
+    // "custom/left-arrow-dark",
+    // "custom/suspend",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
-    "custom/suspend",
+    "custom/clipboard",
+    "custom/notification",
     "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock"
@@ -147,8 +150,25 @@
     "exec-if": "[ $(cliphist list | wc -l) -gt 0 ]",
     "signal": 9
   },
-  "custom/suspend": {
-    "format": "⏼",
-    "on-click": "swaylock & systemctl suspend"
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click-middle": "swaync-client -C",
+    "escape": true
   }
+  // "custom/suspend": {
+  //   "format": "⏼",
+  //   "on-click": "swaylock & systemctl suspend"
+  // }
 }

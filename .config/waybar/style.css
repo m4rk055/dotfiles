@@ -38,6 +38,7 @@ window#waybar {
 #temperature,
 #language,
 #custom-clipboard,
+#custom-notification,
 #custom-suspend {
   background: #1a1a1a;
 }
@@ -128,6 +129,18 @@ button:hover {
   padding-right: 10px;
   padding-left: 10px;
 }
+
+#custom-notification {
+  padding-right: 10px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+  padding-bottom: 4px;
+}
+
 
 #custom-suspend {
   padding-right: 10px;
