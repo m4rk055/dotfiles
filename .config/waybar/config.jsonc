@@ -149,6 +149,6 @@
   },
   "custom/suspend": {
     "format": "⏼",
-    "on-click": "swaylock -c 000000 --fade-in 0.2 --ignore-empty-password --clock & systemctl suspend"
+    "on-click": "swaylock & systemctl suspend"
   }
 }

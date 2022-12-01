@@ -1,0 +1,10 @@
+color=000000
+fade-in=0.2
+
+indicator-radius=70
+indicator-thickness=6
+
+indicator
+indicator-caps-lock
+ignore-empty-password
+clock

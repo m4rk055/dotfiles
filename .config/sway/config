@@ -384,7 +384,7 @@ exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
   exec --no-startup-id slack
   assign [class="Slack"] $ws1
 
-  bindsym $mod+Shift+x exec swaylock -c 000000 --fade-in 0.2 --ignore-empty-password --clock
+  bindsym $mod+Shift+x exec swaylock
 
 #####################################
 
