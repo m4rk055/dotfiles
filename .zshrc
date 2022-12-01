@@ -31,8 +31,18 @@ export PYTHON=/usr/bin/python
 export DOTNET_ROOT=/snap/dotnet-sdk/current
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias v='nvim'
+alias vim='nvim'
 alias grep='rg'
+alias clear="printf '\033[2J\033[3J\033[1;1H'; clear"
+
+bindkey -s '^l' 'clear^M'
+
+function mkcd {
+    mkdir $1
+    cd $1
+}
+
+alias rmf='rm -rf'
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
