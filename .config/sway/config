@@ -46,10 +46,6 @@ set $mod Mod4
   bindsym $mod+d exec rofi -theme solarized -font "hack 10" -show run
   bindsym $mod+Shift+d exec yofi --config-file ~/.config/yofi/config
 
-  # launch categorized menu
-  bindsym $mod+z exec --no-startup-id morc_menu
-
-
   # Font for window titles
   font xft:URWGothic-Book 11
 
@@ -356,19 +352,17 @@ exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
   # Autostart applications
   exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-  exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-  # exec --no-startup-id manjaro-hello
-  # exec --no-startup-id nm-applet
+  # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
   exec --no-startup-id 'nm-applet --indicator'
   # exec --no-startup-id xfce4-power-manager
-  exec --no-startup-id pamac-tray
+  # exec --no-startup-id pamac-tray
   # exec --no-startup-id blueman-applet
   # exec_always --no-startup-id sbxkb
-  exec --no-startup-id start_conky_maia
+  # exec --no-startup-id start_conky_maia
   # exec --no-startup-id start_conky_green
   # exec --no-startup-id xautolock -time 10 -locker blurlock
-  exec_always --no-startup-id ff-theme-util
-  exec_always --no-startup-id fix_xcursor
+  # exec_always --no-startup-id ff-theme-util
+  # exec_always --no-startup-id fix_xcursor
 
 
   # Theme colors
@@ -381,8 +375,8 @@ exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
     client.background       #2B2C2B
 
-  exec --no-startup-id slack
-  assign [class="Slack"] $ws1
+  # exec --no-startup-id slack
+  # assign [class="Slack"] $ws1
 
   bindsym $mod+Shift+x exec swaylock
 
@@ -391,7 +385,7 @@ exec "rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob"
 
 # Start Applications
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F1 exec pcmanfm
+# bindsym $mod+F1 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 # bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 # bindsym $mod+F5 exec terminal -e 'mocp'
